@@ -1,11 +1,14 @@
+# Double rotate and take image for DRRP method. Make sure the second motor rotates at 5x the rate of the first
+# Rotate the first quarter-wave plate between 0 and 180 degrees in 4 or 5 degree steps, depending how much data you want
+# Make sure to connect and home both rotators using the Kinesis app BEFORE running this script
+# Remember to change the image file name and folder destination as desired
+
 import FliSdk_V2 as sdk
 from astropy.io import fits
 import numpy as np
 import time
 from pylablib.devices import Thorlabs
 import copy
-
-# Double rotate and take image for DRRP method. Make sure the second motor rotates at 5x the rate of the first
 
 # Setting context
 context = sdk.Init()
